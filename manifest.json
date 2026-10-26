@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "OSM Building Area",
+  "version": "1.1.0",
+  "description": "Shows an estimated footprint area for buildings selected on OpenStreetMap, directly in the object sidebar.",
+  "minimum_chrome_version": "102",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.openstreetmap.org/*",
+        "https://openstreetmap.org/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "style.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
